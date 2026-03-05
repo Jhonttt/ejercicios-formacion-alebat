@@ -1,50 +1,40 @@
 //? Ejercicio 3, Creando más tipos
 
-// 1. Partiendo del ejercicio anterior, crea un nuevo objeto llamado `cat` que solamente tenga `name`, `color`, `canSleep`
-// 2. Partiendo del ejercicio anterior, crea un nuevo objeto llamado `Snake` que solamente tenga `canEat`, `canDrink`, `canSleep`
+//* 1. Partiendo del ejercicio anterior, crea un nuevo objeto llamado `cat` que solamente tenga `name`, `color`, `canSleep`
+//* 2. Partiendo del ejercicio anterior, crea un nuevo objeto llamado `Snake` que solamente tenga `canEat`, `canDrink`, `canSleep`
 
-interface bird {
-  name: string,
-  canEat: boolean,
-  canDrink: boolean,
-  canSleep: boolean,
-  canFly: boolean,
-}
+import { Animal } from "./ej1";
+import { PerroV2 } from "./ej2";
 
-interface dog extends bird {
-  race: 'Husky' | 'Labrador' | 'Chucho',
-  age: number,  
-}
+type Gato = Pick<Animal, "name" | "canSleep"> & { color: string };
+type Serpiente = Omit<Animal, "name" | "canFly">;
 
-type cat = Pick<bird, 'name' | 'canSleep'> & { color: string };
-type Snake = Omit<bird, 'name' | 'canFly'>;
-
-const bird3: bird = {
-  name: 'Piolin',
+const bird: Animal = {
+  name: "Piolin",
   canEat: false,
   canDrink: true,
   canSleep: true,
-  canFly: true
-}
+  canFly: true,
+};
 
-const dog3: dog = {
-  name: 'Princesa',
+const dog: PerroV2 = {
+  name: "Princesa",
   canEat: true,
   canDrink: true,
   canSleep: true,
   canFly: false,
-  race: 'Chucho',
-  age: 1
-}
+  race: "Chucho",
+  age: 1,
+};
 
-const cat1: cat = {
-  name: 'Princesa',
+const cat: Gato = {
+  name: "Princesa",
   canSleep: true,
-  color: 'blanco',
-}
+  color: "blanco",
+};
 
-const snake1: Snake = {
+const snake1: Serpiente = {
   canEat: true,
   canDrink: false,
   canSleep: true,
-}
+};
