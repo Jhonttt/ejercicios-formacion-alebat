@@ -15,7 +15,7 @@ interface dog extends bird {
   age: number,
 }
 
-const bird1: bird = {
+const bird2: bird = {
   name: 'Piolin',
   canEat: false,
   canDrink: true,
@@ -23,7 +23,7 @@ const bird1: bird = {
   canFly: true
 }
 
-const dog1: dog = {
+const dog2: dog = {
   name: 'Princesa',
   canEat: true,
   canDrink: true,

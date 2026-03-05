@@ -12,7 +12,7 @@ interface bird {
   canFly: boolean,
 }
 
-interface dog extends bird {
+interface dogg extends bird {
   race: string,
   age: number,
 }
@@ -25,7 +25,7 @@ const bird1: bird = {
   canFly: true
 }
 
-const dog1: dog = {
+const dog1: dogg = {
   name: 'Princesa',
   canEat: true,
   canDrink: true,
