@@ -1,0 +1,2 @@
+# Repositorio con los ejercicios de formación de alebat
+Se distribuirán en carpetas donde cada carpeta corresponde a la tecnología/herramienta de la que se harán ejercicios que estarán dentro de dicha carpeta.
