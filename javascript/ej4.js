@@ -14,9 +14,7 @@ const usuario = {
 console.log(nombreUsuario(usuario));
 
 function nombreUsuario({ nombre, apellido }) {
-  const nombreCompleto = "Me llamo " + nombre + " " + apellido;
-
-  return nombreCompleto;
+  return "Me llamo " + nombre + " " + apellido;
 }
 
 // Lo primero sería cambiar el nombre de la constante a nombreCompleto
@@ -33,9 +31,13 @@ const user = {
   profesion: "Barro man",
 };
 
-function userData({salary, name, last}) {
-  const annualSalary = salary * 12;
-  const fullName = nombreUsuario({nombre: name, apellido: last});
+function calculateAnnualSalary({ salary }) {
+  return salary * 12;
+}
+
+function userData({ salary, name, last }) {
+  const annualSalary = calculateAnnualSalary({ salary });
+  const fullName = nombreUsuario({ nombre: name, apellido: last });
 
   return `Me llamo ${fullName} y cobro ${annualSalary}€ al año`;
 }
@@ -44,7 +46,6 @@ console.log(userData(user));
 
 // Lo primero seria desestructurar los argumentos de nuevo, para solo recibir los datos necesarios
 // Y además reutilizar la función previamente creada dándole un alias que cuadre con el nombre en la función
-
 
 // Tercer código
 //* Si el usuario tiene 30 años y no es español, recibirá una ayuda del gobierno de 2000€
@@ -56,11 +57,11 @@ const newUser = {
 };
 
 function esExtranjero({ nationality, age }) {
-  if (nationality != 'España' || age != 30) return 'No es apto para la ayuda del gobierno';
-  return "No es apto para la ayuda del gobierno";
+  if (nationality !== "España" || age !== 30) return "No es apto para la ayuda del gobierno";
+  return "Apto para la ayuda del gobierno";
 }
 
-console.log(esExtranjero(user));
+console.log(esExtranjero(newUser));
 
 // Lo primero sería cambiar el nombre de la constante a esExtranjero
 // Volvemos a desestructurar los datos

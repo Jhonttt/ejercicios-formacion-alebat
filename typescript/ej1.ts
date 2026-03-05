@@ -1,10 +1,10 @@
-// Ejercicio 1, typescript: types e interfaces
+//? Ejercicio 1, typescript: types e interfaces
 
-// Crea un objeto bird que tenga los siguientes datos: name, canEat, canDrink, canSleep, canFly
-// Crea un objeto dog que tenga los mismos datos que pájaro, pero que a demás tenga: race, age
-// Crea los tipos/interfaces necesarios para poder trabajar con estos datos en TypeScript.
+//* Crea un objeto bird que tenga los siguientes datos: name, canEat, canDrink, canSleep, canFly
+//* Crea un objeto dog que tenga los mismos datos que pájaro, pero que a demás tenga: race, age
+//* Crea los tipos/interfaces necesarios para poder trabajar con estos datos en TypeScript.
 
-interface bird {
+export interface Animal {
   name: string,
   canEat: boolean,
   canDrink: boolean,
@@ -12,12 +12,12 @@ interface bird {
   canFly: boolean,
 }
 
-interface dogg extends bird {
+export interface Perro extends Animal {
   race: string,
   age: number,
 }
 
-const bird1: bird = {
+const bird: Animal = {
   name: 'Piolin',
   canEat: false,
   canDrink: true,
@@ -25,7 +25,7 @@ const bird1: bird = {
   canFly: true
 }
 
-const dog1: dogg = {
+const dog: Perro = {
   name: 'Princesa',
   canEat: true,
   canDrink: true,
