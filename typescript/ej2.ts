@@ -13,7 +13,7 @@ const bird: Animal = {
   canEat: false,
   canDrink: true,
   canSleep: true,
-  canFly: true
+  canFly: true 
 }
 
 const dog: PerroV2 = {
