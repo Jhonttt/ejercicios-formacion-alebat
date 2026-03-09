@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  background-color: #ccc;
+}
+
+footer {
+  text-align: center;
+}
+
+main h1 {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+footer p {
+  margin-top: 1rem;
+}
