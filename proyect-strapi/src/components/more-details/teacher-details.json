@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_more_details_teacher_details",
+  "info": {
+    "displayName": "Teacher details",
+    "icon": "dashboard"
+  },
+  "options": {},
+  "attributes": {
+    "speciality": {
+      "type": "enumeration",
+      "required": false,
+      "enum": [
+        "maths",
+        "natures",
+        "spanish",
+        "science"
+      ]
+    },
+    "experience": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

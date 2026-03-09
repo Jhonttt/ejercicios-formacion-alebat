@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_more_details_event_components",
+  "info": {
+    "displayName": "Event details",
+    "icon": "dashboard"
+  },
+  "options": {},
+  "attributes": {
+    "date": {
+      "type": "date"
+    },
+    "time": {
+      "type": "time"
+    },
+    "place": {
+      "type": "enumeration",
+      "enum": [
+        "Madrid",
+        "Barcelona",
+        "Valencia"
+      ]
+    }
+  },
+  "config": {}
+}

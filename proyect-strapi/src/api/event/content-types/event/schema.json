@@ -1,0 +1,71 @@
+{
+  "kind": "collectionType",
+  "collectionName": "events",
+  "info": {
+    "singularName": "event",
+    "pluralName": "events",
+    "displayName": "event"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "basic": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "information.title-description",
+      "repeatable": false,
+      "required": true
+    },
+    "eventDetails": {
+      "type": "component",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "more-details.event-component",
+      "repeatable": false
+    },
+    "teachers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::teacher.teacher",
+      "inversedBy": "events"
+    },
+    "topics": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::topic.topic",
+      "mappedBy": "event"
+    },
+    "study_materials": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::study-material.study-material",
+      "mappedBy": "event"
+    },
+    "dinamicZone": {
+      "type": "dynamiczone",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "components": [
+        "components-api.rich-text",
+        "components-api.links-list",
+        "components-api.image-gallery"
+      ]
+    }
+  }
+}
