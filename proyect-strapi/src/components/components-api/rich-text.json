@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_components_api_rich_texts",
+  "info": {
+    "displayName": "rich text"
+  },
+  "options": {},
+  "attributes": {
+    "description": {
+      "type": "richtext"
+    }
+  },
+  "config": {}
+}

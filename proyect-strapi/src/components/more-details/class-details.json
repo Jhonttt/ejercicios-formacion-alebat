@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_more_details_class_details",
+  "info": {
+    "displayName": "Class details",
+    "icon": "dashboard"
+  },
+  "options": {},
+  "attributes": {
+    "schedule": {
+      "type": "enumeration",
+      "required": false,
+      "enum": [
+        "morning",
+        "afternoon",
+        "night"
+      ]
+    },
+    "class": {
+      "type": "enumeration",
+      "required": false,
+      "enum": [
+        "A1",
+        "B1",
+        "A2",
+        "B2"
+      ]
+    }
+  },
+  "config": {}
+}

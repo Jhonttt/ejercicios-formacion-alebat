@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "subtomes",
+  "info": {
+    "singularName": "subtome",
+    "pluralName": "subtomes",
+    "displayName": "subtome"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "topic": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::topic.topic",
+      "inversedBy": "subtomes"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
+    }
+  }
+}

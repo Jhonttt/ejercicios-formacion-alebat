@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_components_api_links_lists",
+  "info": {
+    "displayName": "links list"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": false
+    },
+    "url": {
+      "type": "string",
+      "required": false
+    }
+  },
+  "config": {}
+}
