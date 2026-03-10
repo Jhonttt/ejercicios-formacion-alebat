@@ -3,5 +3,7 @@ import TheTitleVue from "./components/TheTitle.vue";
 </script>
 
 <template>
-  <TheTitleVue prop-title="A good title"></TheTitleVue>
+  <TheTitleVue>
+    <h1>A good title</h1>
+  </TheTitleVue>
 </template>
