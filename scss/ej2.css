@@ -1,0 +1,14 @@
+ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1rem;
+  list-style-type: none;
+}
+ul li a {
+  text-decoration-line: none;
+}
+
+/*# sourceMappingURL=ej2.css.map */
