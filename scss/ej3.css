@@ -1,0 +1,12 @@
+.container {
+  background: peru;
+}
+.container__item {
+  text-wrap: balance;
+  text-align: center;
+}
+.container__item--bold {
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=ej3.css.map */

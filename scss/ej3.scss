@@ -1,0 +1,14 @@
+$color-primary: peru;
+
+
+.container {
+  background: $color-primary;
+  &__item {
+    text-wrap: balance;
+    text-align: center;
+
+    &--bold {
+      font-weight: bold;
+    }
+  }
+}
