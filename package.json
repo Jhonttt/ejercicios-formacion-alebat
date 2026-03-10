@@ -1,0 +1,14 @@
+{
+  "name": "ejercicios-formacion-alebat",
+  "version": "1.0.0",
+  "description": "Se distribuirán en carpetas donde cada carpeta corresponde a la tecnología/herramienta de la que se harán ejercicios que estarán dentro de dicha carpeta.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.97.3"
+  }
+}
