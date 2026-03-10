@@ -4,7 +4,7 @@ $color-secondary: #52f;
 $font-primary: 1rem;
 $font-secondary: 0.5rem;
 
-$transition-button: margin-left 4s;
+$transition-button: scale 0.5s;
 
 h1 {
   color: $color-primary;
@@ -23,4 +23,9 @@ h3 {
 
 button {
   transition: $transition-button;
+  font-size: $font-primary;
+
+  &:hover {
+    scale: 1.2;
+  }
 }
