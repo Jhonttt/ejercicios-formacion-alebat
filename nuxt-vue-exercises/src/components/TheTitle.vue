@@ -1,14 +1,5 @@
-<script setup lang="ts">
-withDefaults(
-  defineProps<{
-    propTitle?: string;
-  }>(),
-  {
-    propTitle: "A normal title",
-  },
-);
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <h1>{{ propTitle }}</h1>
+  <slot>A normal title</slot>
 </template>
