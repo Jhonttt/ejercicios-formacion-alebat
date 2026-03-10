@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import TheTitleVue from "./components/TheTitle.vue";
+// import TheTitleVue from "./components/TheTitle.vue";
+import TheCounter from "./components/TheCounter.vue";
 </script>
 
 <template>
-  <TheTitleVue>
-    <h1>A good title</h1>
-  </TheTitleVue>
+  <TheCounter></TheCounter>
 </template>
