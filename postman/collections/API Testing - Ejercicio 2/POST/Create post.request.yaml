@@ -1,0 +1,13 @@
+$kind: http-request
+name: Create post
+url: "{{base_url}}/posts"
+method: POST
+body:
+  type: json
+  content: |-
+    {
+      "title": "Mi nuevo post desde Postman",
+      "body": "Este es el contenido de mi post de prueba",
+      "userId": 1
+    }
+order: 1773152790214

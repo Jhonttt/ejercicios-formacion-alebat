@@ -1,0 +1,20 @@
+GET https://jsonplaceholder.typicode.com/posts
+
+###
+
+GET https://jsonplaceholder.typicode.com/posts/1
+
+###
+
+GET https://jsonplaceholder.typicode.com//posts/1/comments
+
+###
+
+POST https://jsonplaceholder.typicode.com/posts
+Content-Type: application/json
+
+{
+  "title": "Mi nuevo post desde Postman",
+  "body": "Este es el contenido de mi post de prueba",
+  "userId": 1
+}
