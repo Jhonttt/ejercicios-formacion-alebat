@@ -1,0 +1,26 @@
+$color-primary: #4df;
+$color-secondary: #52f;
+
+$font-primary: 1rem;
+$font-secondary: 0.5rem;
+
+$transition-button: margin-left 4s;
+
+h1 {
+  color: $color-primary;
+  font-size: $font-primary;
+}
+
+h2 {
+  color: $color-secondary;
+  font-size: $font-secondary;
+}
+
+h3 {
+  color: $color-secondary;
+  font-size: $font-primary;
+}
+
+button {
+  transition: $transition-button;
+}
