@@ -1,5 +1,7 @@
 <template>
   <div>
-    <TheTitle propTitle="A good title" />
+    <TheTitle>
+      <h1>A good title via slot</h1>
+    </TheTitle>
   </div>
 </template>
