@@ -1,6 +1,5 @@
 <template>
   <div>
-    <NavBar />
-    <RouterView />
+    <TheCounter />
   </div>
 </template>
