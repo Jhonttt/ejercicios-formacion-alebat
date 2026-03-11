@@ -3,6 +3,18 @@ const { count, increment, decrement, reset } = useCounter();
 
 const doubleCount = computed(() => count.value * 2);
 
+const calculateText = () => {
+  if (count.value <= 0) return `Estás en el valor mínimo`;
+  else if (count.value >= 10) return `Estás en el valor máximo`;
+  return `Estás en los parámetros adecuados`
+}
+
+const calculateTextColor = () => {
+  if (count.value <= 0) return 'text-red-300';
+  else if (count.value >= 10) return 'text-green-300';
+  return 'text-white';
+}
+
 </script>
 
 <template>
@@ -12,7 +24,10 @@ const doubleCount = computed(() => count.value * 2);
     >
       <TheTitle>The dynamic counter</TheTitle>
     </div>
-    <div class="flex justify-center gap-3 pt-3">
+    <p class="text-center text-xl" :class="calculateTextColor()">
+      {{ calculateText() }}
+    </p>
+    <div class="flex justify-center gap-3 pt-1">
       <button class="bg-green-300 px-3 py-1 rounded hover:bg-green-950 hover:text-green-200 disabled:bg-gray-800 disabled:text-white disabled:cursor-not-allowed" @click="decrement"
       :disabled="count <= 0"
       >
