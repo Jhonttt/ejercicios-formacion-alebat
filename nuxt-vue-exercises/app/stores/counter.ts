@@ -1,6 +1,7 @@
-export const useCounter = () => {
-  const count = ref<number>(5);
+import { defineStore } from "pinia";
 
+export const useCounterStore = defineStore("counter", () => {
+  const count = ref<number>(5);
   const doubleCount = computed(() => count.value * 2);
 
   const increment = () => {
@@ -38,4 +39,4 @@ export const useCounter = () => {
     calculateText,
     calculateTextColor,
   };
-};
+});

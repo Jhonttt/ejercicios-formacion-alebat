@@ -1,19 +1,9 @@
 <script setup lang="ts">
-const { count, increment, decrement, reset } = useCounter();
+import { storeToRefs } from 'pinia'
 
-const doubleCount = computed(() => count.value * 2);
-
-const calculateText = () => {
-  if (count.value <= 0) return `Estás en el valor mínimo`;
-  else if (count.value >= 10) return `Estás en el valor máximo`;
-  return `Estás en los parámetros adecuados`
-}
-
-const calculateTextColor = () => {
-  if (count.value <= 0) return 'text-red-300';
-  else if (count.value >= 10) return 'text-green-300';
-  return 'text-white';
-}
+const counterStore = useCounterStore();
+const { count, doubleCount } = storeToRefs(counterStore)
+const { increment, decrement, reset, calculateText, calculateTextColor } = counterStore
 
 </script>
 
