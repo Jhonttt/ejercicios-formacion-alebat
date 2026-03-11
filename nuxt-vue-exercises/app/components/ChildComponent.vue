@@ -32,6 +32,10 @@ const message = inject('message');
       </button>
 
     </div>
-    <h2 class="text-center text-white hover:text-blue-600 hover:cursor-pointer">{{ message }}</h2>
+    <h2 class="text-center text-white">
+      <span class="hover:text-amber-500 hover:cursor-pointer">
+        {{ message }}
+      </span>
+    </h2>
   </section>
 </template>
