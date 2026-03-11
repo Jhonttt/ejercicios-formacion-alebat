@@ -1,32 +1,26 @@
 <script setup lang="ts">
-const count = ref(5);
-
-const plusOneCounter = () => {
-  if (count.value >= 10 ) return;
-  count.value++;
-}
-
-const minusOneCounter = () => {
-  if (count.value <= 0 ) return;
-  count.value--;
-}
-
+const { count, increment, decrement, reset } = useCounter();
 </script>
 
 <template>
-  <main class="bg-green-300">
+  <main class="bg-purple-400">
     <div
       class="flex justify-center bg-yellow-300 py-2 text-xl uppercase text-yellow-800 font-bold"
     >
       <TheTitle>El contador dinámico</TheTitle>
     </div>
     <div class="flex justify-center gap-3 pt-3">
-      <button class="bg-red-300 px-3 py-1 rounded hover:bg-red-950 hover:text-red-200 disabled:bg-gray-800 disabled:text-white disabled:cursor-not-allowed" @click="minusOneCounter"
+      <button class="bg-green-300 px-3 py-1 rounded hover:bg-green-950 hover:text-green-200 disabled:bg-gray-800 disabled:text-white disabled:cursor-not-allowed" @click="decrement"
       :disabled="count <= 0"
       >
         Decrement
       </button>
-      <button class="bg-blue-300 px-3 py-1 rounded hover:bg-blue-950 hover:text-blue-200 disabled:bg-gray-800 disabled:text-white disabled:cursor-not-allowed" @click="plusOneCounter"
+      <button class="bg-red-300 px-3 py-1 rounded hover:bg-red-950 hover:text-red-200 disabled:bg-gray-800 disabled:text-white disabled:cursor-not-allowed" @click="reset"
+      :disabled="count === 0"
+      >
+        Reset
+      </button>
+      <button class="bg-blue-300 px-3 py-1 rounded hover:bg-blue-950 hover:text-blue-200 disabled:bg-gray-800 disabled:text-white disabled:cursor-not-allowed" @click="increment"
       :disabled="count >= 10"
       >
         Increment
