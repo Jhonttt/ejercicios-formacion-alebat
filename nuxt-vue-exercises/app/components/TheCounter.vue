@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const count = ref(0);
+const count = ref(5);
 
 const plusOneCounter = () => {
   if (count.value >= 10 ) return;
