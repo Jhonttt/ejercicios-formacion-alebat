@@ -1,31 +1,19 @@
-# Vue 3 + TypeScript + Vite
+# Nuxt Minimal Starter + Vue 3 + TypeScript
 
-Proyecto creado con vite donde se usa vue y typescript.
+Proyecto creado con nuxt donde se usa vue y typescript, para practicar sobre vue y nuxt.
 
 ## Jerarquía de carpetas:
 
 nuxt-vue-exercises/
-├─ .vscode/
-│  └─ extensions.json
+├─ .nuxt/*
+├─ app/
+│  └─ app.vue
 ├─ public/
-│  └─ vite.svg
-├─ src/
-│  ├─ assets/
-│  │  ├─ styles/
-│  │  │  └─ reset.scss
-│  │  └─ vue.svg
-│  ├─ components/
-│  │  └─ Layaout.vue
-│  ├─ pages/
-│  ├─ App.vue
-│  ├─ main.ts
-│  └─ style.scss
+│  ├─ favicon.ico
+│  └─ robots.txt
 ├─ .gitignore
-├─ index.html
+├─ nuxt.config.ts
 ├─ package-lock.json
 ├─ package.json
 ├─ README.md
-├─ tsconfig.app.json
-├─ tsconfig.json
-├─ tsconfig.node.json
-└─ vite.config.ts
+└─ tsconfig.json
