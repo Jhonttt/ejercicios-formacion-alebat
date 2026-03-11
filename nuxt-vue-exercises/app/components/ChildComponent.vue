@@ -11,6 +11,8 @@ function handleClick() {
     message: isActive.value ? "Hello from the child component" : "",
   });
 }
+
+const message = inject('message');
 </script>
 
 <template>
@@ -20,13 +22,16 @@ function handleClick() {
     >
       <TheTitle>Communication with the father</TheTitle>
     </div>
-    <div class="flex justify-center py-1">
+    
+    <div class="flex justify-center pt-1">
       <button
         @click="handleClick"
         class="px-2 py-1 rounded bg-purple-900 text-white my-2"
       >
         {{ isActive ? "Hide message" : "Send message" }}
       </button>
+
     </div>
+    <h2 class="text-center text-white hover:text-blue-600 hover:cursor-pointer">{{ message }}</h2>
   </section>
 </template>
