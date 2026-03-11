@@ -1,5 +1,8 @@
 <script setup lang="ts">
 const { count, increment, decrement, reset } = useCounter();
+
+const doubleCount = computed(() => count.value * 2);
+
 </script>
 
 <template>
@@ -7,7 +10,7 @@ const { count, increment, decrement, reset } = useCounter();
     <div
       class="flex justify-center bg-yellow-300 py-2 text-xl uppercase text-yellow-800 font-bold"
     >
-      <TheTitle>El contador dinámico</TheTitle>
+      <TheTitle>The dynamic counter</TheTitle>
     </div>
     <div class="flex justify-center gap-3 pt-3">
       <button class="bg-green-300 px-3 py-1 rounded hover:bg-green-950 hover:text-green-200 disabled:bg-gray-800 disabled:text-white disabled:cursor-not-allowed" @click="decrement"
@@ -29,6 +32,16 @@ const { count, increment, decrement, reset } = useCounter();
     <h2 class="text-center text-green-950 pt-2 pb-4">
       <span class="bg-blue-400 px-6 py-2 rounded-full" :class="count === 10 ? 'text-green-100 bg-green-500' : ''">
         Count: <span class="font-bold text-2xl">{{ count }}</span>
+      </span>
+    </h2>
+    <div
+      class="flex justify-center bg-yellow-300 py-2 text-xl uppercase text-yellow-800 font-bold"
+    >
+      <TheTitle>The double of the dynamic counter</TheTitle>
+    </div>
+    <h2 class="text-center text-green-950 pt-2 pb-4">
+      <span class="bg-blue-400 px-6 py-2 rounded-full" :class="doubleCount === 10 ? 'text-green-100 bg-green-500' : ''">
+        Count: <span class="font-bold text-2xl">{{ doubleCount }}</span>
       </span>
     </h2>
   </main>
