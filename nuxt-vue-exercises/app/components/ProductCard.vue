@@ -1,18 +1,12 @@
 <script setup lang="ts">
-withDefaults(
-  defineProps<{
-    image?: string;
-    title?: string;
-    description?: string;
-    price?: number;
-  }>(),
-  {
-    image: '/default.png',
-    title: 'Default tile',
-    description: 'Default description',
-    price: 0
-  },
-);
+import type { Product } from '~/data/mock';
+
+withDefaults(defineProps<Omit<Product, 'id'>>(), {
+  image: "/default.png",
+  title: "Default tile",
+  description: "Default description",
+  price: 0,
+});
 </script>
 
 <template>
@@ -22,9 +16,13 @@ withDefaults(
         {{ title }}
       </span>
     </h2>
-    <img :src="image" :alt="`An ${title}`">
+    <img :src="image" :alt="`An ${title}`" />
     <p>{{ description }}</p>
     <p>Price: ${{ price }}</p>
-    <button class="bg-green-400 border rounded p-1 px-2 my-1 text-green-950 hover:bg-green-950 hover:text-green-100">View {{ title }}</button>
+    <button
+      class="bg-green-400 border rounded p-1 px-2 my-1 text-green-950 hover:bg-green-950 hover:text-green-100"
+    >
+      View {{ title }}
+    </button>
   </article>
 </template>
