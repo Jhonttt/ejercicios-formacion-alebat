@@ -5,6 +5,13 @@ export interface Product {
   description?: string;
   price?: number;
 }
+export interface Series {
+  id: number;
+  category: string;
+  title: string;
+  episode: number;
+  video?: string;
+}
 
 export const mockProducts: Product[] = [
   {
@@ -69,5 +76,50 @@ export const mockProducts: Product[] = [
     title: "Producto 3",
     description: "Descripción del producto 3",
     price: 39.99,
+  },
+];
+
+export const mockSeries: Series[] = [
+  {
+    id: 1,
+    category: "aventuras",
+    title: "spiderman",
+    episode: 1,
+    video: "https://www.youtube.com/watch?v=pKS6zndTbH0",
+  },
+  {
+    id: 2,
+    category: "aventuras",
+    title: "spiderman",
+    episode: 2,
+    video: "https://www.youtube.com/watch?v=pKS6zndTbH0",
+  },
+  {
+    id: 3,
+    category: "aventuras",
+    title: "spiderman",
+    episode: 3,
+    video: "https://www.youtube.com/watch?v=pKS6zndTbH0",
+  },
+  {
+    id: 4,
+    category: "miedo",
+    title: "el conjuro",
+    episode: 1,
+    video: "https://www.youtube.com/watch?v=pKS6zndTbH0",
+  },
+  {
+    id: 5,
+    category: "miedo",
+    title: "el conjuro",
+    episode: 2,
+    video: "https://www.youtube.com/watch?v=pKS6zndTbH0",
+  },
+  {
+    id: 6,
+    category: "miedo",
+    title: "el conjuro",
+    episode: 3,
+    video: "https://www.youtube.com/watch?v=pKS6zndTbH0",
   },
 ];

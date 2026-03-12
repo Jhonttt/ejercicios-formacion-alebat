@@ -12,17 +12,13 @@ function handleClick() {
   });
 }
 
-const message = inject('message');
+const message = inject("message");
 </script>
 
 <template>
   <section class="bg-purple-400">
-    <div
-      class="flex justify-center bg-yellow-300 py-2 text-xl uppercase text-yellow-800 font-bold"
-    >
-      <TheTitle>Communication with the father</TheTitle>
-    </div>
-    
+    <TheTitle>Communication with the father</TheTitle>
+
     <div class="flex justify-center pt-1">
       <button
         @click="handleClick"
@@ -30,7 +26,6 @@ const message = inject('message');
       >
         {{ isActive ? "Hide message" : "Send message" }}
       </button>
-
     </div>
     <h2 class="text-center text-white">
       <span class="hover:text-amber-500 hover:cursor-pointer">
