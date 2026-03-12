@@ -2,6 +2,10 @@
 import { mockProducts } from "~/data/mock";
 const counterStore = useCounterStore();
 
+definePageMeta({
+  layout: 'catalogo-layout'
+})
+
 const products = ref(mockProducts);
 
 const groupedProducts = computed(() => {
@@ -14,7 +18,7 @@ const groupedProducts = computed(() => {
 </script>
 
 <template>
-  <main>
+  <main class="bg-white">
     <h2 class="text-center text-green-950 pt-2 pb-4">
       <span class="bg-blue-400 px-6 py-2 rounded-full" :class="counterStore.count === 10 ? 'text-green-100 bg-green-500' : ''">
         Count: <span class="font-bold text-2xl">{{ counterStore.count }}</span>
