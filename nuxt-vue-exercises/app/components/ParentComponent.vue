@@ -10,9 +10,8 @@ provide('message', 'Hello from the father component via provide/inject');
 
 <template>
   <section>
-    
     <ChildComponent @childEvent="handleChildEvent" />
-    <h1 v-if="message" class="bg-purple-400 text-center pb-2 pt-1">
+    <h1 v-if="message" class="text-center pb-2 pt-1">
       <span class="bg-blue-500/50 border-purple-950 rounded p-1 text-white">{{
         message
       }}</span>
