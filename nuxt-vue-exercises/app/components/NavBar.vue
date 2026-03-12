@@ -14,6 +14,7 @@ import { socialLinks } from '~/data/socialLinks';
     </div>
     <nav class="mr-5 text-white">
       <NuxtLink href="/catalogo">Catalogo</NuxtLink>
+      <NuxtLink href="/productos">Productos</NuxtLink>
     </nav>
   </header>
 </template>
