@@ -1,9 +1,18 @@
+<script setup lang="ts">
+import { socialLinks } from '~/data/socialLinks';
+</script>
+
 <template>
-  <header class="bg-gray-500 flex justify-between py-3">
-    <p class="ml-5 text-blue-200">
-      <NuxtLink href="/home">Home</NuxtLink>
-    </p>
-    <nav class="mr-5 text-red-200">
+  <header class="bg-black flex justify-between py-3">
+    <div class="ml-5 flex items-center gap-3">
+      <NuxtLink href="/" class="text-white">Home</NuxtLink>
+      <a v-for="rrdd in socialLinks" :key="rrdd.id" :href="rrdd.href">
+        <svg width="24" height="24" fill="white">
+          <use :href="'/sprite.svg#' + rrdd.id" />
+        </svg>
+      </a>
+    </div>
+    <nav class="mr-5 text-white">
       <NuxtLink href="/catalogo">Catalogo</NuxtLink>
     </nav>
   </header>
